@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  
+<header>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('images/melbourne.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background: rgba(255, 255, 255, 0.7); /* White overlay with transparency */
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul {
+            list-style: none;
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        @media(max-width: 700px) {
+            .nav-links ul li {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+
+            nav .fa {
+                display: block;
+                color: #000000;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .image-center {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .image-center img {
+            max-width: 80%; 
+            height: auto;
+            text-align: center;
+        }
+
+        section p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/Melbourne_Logo.png" alt="Melbourne Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="transport.html">TRANSPORT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <br>
+
+    <main>
+      <section>
+        <h2>Booking Facilities</h2>
+   
+    <p>At our service, we prioritize your convenience and satisfaction. Our booking facilities are designed to offer a seamless and efficient experience for all our customers. Whether you're planning a quick getaway or an extended stay, our online booking system is straightforward and user-friendly. Simply select your desired destination, choose your preferred dates, and confirm your booking with just a few clicks. Our dedicated customer service team is available 24/7 to assist you with any queries or concerns you may have. From providing detailed travel itineraries to customizing tours to fit your unique preferences, we are here to ensure that your trip to Melbourne is memorable and hassle-free. Reach out to us via phone, email, or live chat for any assistance you need. We look forward to helping you explore the best that Melbourne has to offer.
+
+</p>
+<div class="image-center">
+
+<img src="images/Service.jpeg" alt="Connect with Us">
+<br>
+      </section>
+      
+<br>
+        <h2>Want to Reserve Booking</h2>
+        <p>The Booking reservation is easily accessible by Email,Contact Number, and You may know more from our linked website.</p>
+        <h2>Email to Contact</h2>
+        <p>If you are interested to know more information about travelling and a way of placing an online booking. Online bookings are to be directed to </p> 
+<p style="text-align:center"><a href="r.lai@latrobe.edu.au. ">r.lai@latrobe.edu.au.</a> 
+ </p>
+        <h2>Contact Us</h2>
+        <p>We are here to assist you with all your travel needs and inquiries. Whether you have questions about our tour packages, need help with booking, or require additional information about your trip to Melbourne, feel free to reach out to us. You can contact our dedicated customer service team at any time.</p> 
+<p style="text-align:center"><a href="Phone: +61 3 1234 5678">+61 3 1234 5678</a>
+   </p>
+        <h2>Visit Website for more info</h2>
+        <p>For comprehensive details about our tour packages, booking options, and the top places of interest in Melbourne, please visit our official website. Our website offers an extensive range of resources to help you plan your perfect trip, including detailed itineraries, customer reviews, and special offers.</p> 
+<p style="text-align:center"><a href="https://www.visitmelbourne.com">Visit Victoria</a> website.</p>
+<br>
+    </main>
+    <footer>
+      <p>&copy; 2023 InfoSysAnalysis - Victorian Branch</p>
+    </footer>
+  </body>
+</html> 

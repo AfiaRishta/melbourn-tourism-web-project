@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In / Sign Up Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+    .tabs {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .tabs button {
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: color 0.3s, border-bottom 0.3s;
+    }
+    .tabs button.active {
+        color: #ff8c00;
+        border-bottom: 2px solid #ff8c00;
+    }
+    .form-container {
+        display: none;
+    }
+    .form-container.active {
+        display: block;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ff8c00;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    .form-group button:hover {
+        background-color: #e07b00;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tabs">
+        <button id="signInTab" class="active" onclick="showForm('signIn')">Log In</button>
+        <button id="signUpTab" onclick="showForm('signUp')">Sign In</button>
+    </div>
+
+    <div id="signInForm" class="form-container active">
+        <div class="form-group">
+            <label for="signInEmail">Enter your email</label>
+            <input type="email" id="signInEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="signInPassword">Enter your password</label>
+            <input type="password" id="signInPassword" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Log In</button>
+        </div>
+    </div>
+
+    <div id="signUpForm" class="form-container">
+        <div class="form-group">
+            <label for="givenName">Given Name</label>
+            <input type="text" id="givenName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="signUpEmail">Email Address</label>
+            <input type="email" id="signUpEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="setPassword">Set a password</label>
+            <input type="password" id="setPassword" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm the password</label>
+            <input type="password" id="confirmPassword" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showForm(form) {
+        document.getElementById('signInForm').classList.remove('active');
+        document.getElementById('signUpForm').classList.remove('active');
+        document.getElementById('signInTab').classList.remove('active');
+        document.getElementById('signUpTab').classList.remove('active');
+        
+        if (form === 'signIn') {
+            document.getElementById('signInForm').classList.add('active');
+            document.getElementById('signInTab').classList.add('active');
+        } else {
+            document.getElementById('signUpForm').classList.add('active');
+            document.getElementById('signUpTab').classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>

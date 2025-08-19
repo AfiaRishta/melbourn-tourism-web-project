@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Transport</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('images/melbourne.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7); /* White overlay with transparency */
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul {
+            list-style: none;
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        @media(max-width: 700px) {
+            .nav-links ul li {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+
+            nav .fa {
+                display: block;
+                color: #000000;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .image-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-center img {
+            max-width: 80%; /* Adjust this value to fit your needs */
+            height: auto;
+        }
+
+        section p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/Melbourne_Logo.png" alt="Melbourne Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="transport.html">TRANSPORT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <br>
+
+    <main>
+        <section>
+            <h2>Melbourne Transportation Services</h2>
+            <p>Melbourne offers a comprehensive transportation network, including trams, buses, and trains. Traditional taxis are readily available, and Uber operates for convenient ride-hailing. The SkyBus provides an express service between Melbourne Airport and the city center, while bike-sharing programs like Blue Bikes offer an alternative for short trips. Remember to check schedules, routes, and fares based on your specific needs! 🚍🚖🚆🚲</p>
+            <div class="image-center">
+                <img src="images/Tram2.jpeg" alt="Connect with Us">
+            </div>
+            <br>
+        </section>
+      
+        <section>
+            <h2>Looking for Transportation</h2>
+            <p>The transportation in Melbourne is easily accessible by Tram, Train, SkyBus, Uber and you may know more from our linked website.</p>
+            <h2>Tram, Train & Buses</h2>
+            <p>When visiting Melbourne as a tourist, you can easily explore the city and its attractions using the public transport system. Metro trains connect Melbourne’s suburbs with Flinders Street Station in the city center. You can use trains to reach various destinations. Melbourne boasts an extensive tram network, making it the only Australian city with trams. Trams are a convenient way to get around the city and visit major attractions. Buses run frequently to major hubs, including shopping centers, schools, hospitals, leisure venues, sports venues, and attractions. They cover various parts of Melbourne.</p>
+            <p style="text-align:center"><a href="https://www.melbournepoint.com.au/Attractions/city-circle-tram">Melbourne Point</a> website.</p>
+            <h2>Uber Taxis & SkyBus</h2>
+            <p>You can use the Uber app to request a taxi in Melbourne. Simply call 13-UBER (13 82 37) or use the app to book a trip on demand or prebook up to 90 days in advance. Uber provides upfront prices and 24/7 availability, making it convenient for travelers. Keep in mind that taxis booked through Uber cannot pick up from airports. Traditional taxis are also available throughout Melbourne. You can hail them on the street or find taxi ranks at various locations. Taxis offer a reliable way to get around the city, especially if you prefer not to use a rideshare app. If you’re traveling from Melbourne Airport to the city, consider taking the SkyBus. While it’s not a taxi or rideshare service, it’s a convenient option for airport transfers.</p>
+            <p style="text-align:center"><a href="https://www.uber.com/au/en/r/cities/taxi/melbourne-vic-au">Melbourne Taxis - Call 13-UBER to Request a Ride</a> website.</p>
+            <h2>Visit Website for more info</h2>
+            <p>For comprehensive details about our tour packages, booking options, and the top places of interest in Melbourne, please visit our official website. Our website offers an extensive range of resources to help you plan your perfect trip, including detailed itineraries, customer reviews, and special offers.</p>
+            <p style="text-align:center"><a href="https://www.ptv.vic.gov.au/">Public Transport Victoria</a> website.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 InfoSysAnalysis - Victorian Branch</p>
+    </footer>
+</body>
+</html>
